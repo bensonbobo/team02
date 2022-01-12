@@ -1,7 +1,7 @@
 @extends('app')
 @section('title','飲料詳細資料')
 @section('Drink_inventory')
-
+    <body bgcolor="#C9FFC9"></body>
 <table border="1">
     <tr><th>編號</th><td>{{$drink->id}}</td></tr>
     <tr><th>名稱</th><td>{{$drink->name}}</td></tr>

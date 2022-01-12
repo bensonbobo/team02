@@ -1,6 +1,7 @@
 @extends('app')
 @section('title','顯示所有飲料資料')
 @section('Drink_inventory')
+    <body bgcolor="#C9FFC9"></body>
 <a href="/brands">
     品牌資料
 </a>

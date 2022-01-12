@@ -1,7 +1,7 @@
 @extends('app')
 @section('title','顯示所有品牌資料')
 @section('Drink_inventory')
-
+    <body bgcolor="#C9FFC9"></body>
 <a href="/drinks">
     飲料資料
 </a>
@@ -37,7 +37,7 @@
                 </a>
             </th>
             <th>
-                <a href="brands/{{$brand->id}}/edit">
+                <a href="/brands/{{$brand->id}}/edit">
                     修改
                 </a>
             </th>
@@ -49,7 +49,7 @@
                 </form>
             </td>
             <th>
-            <a href="brands/create">
+            <a href="/brands/create">
                 新增
             </a>
             </th>

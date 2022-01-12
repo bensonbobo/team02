@@ -1,6 +1,7 @@
 @extends('app')
 @section('title','修改飲料資料')
 @section('Drink_inventory')
+    <body bgcolor="#C9FFC9"></body>
 <form method="post" action="/drinks/{{$drink->id}}">
     @csrf
     @method("put")

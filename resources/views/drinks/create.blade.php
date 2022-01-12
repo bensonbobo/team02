@@ -1,6 +1,7 @@
 @extends('app')
 @section('title','新增飲料資料')
 @section('Drink_inventory')
+    <body bgcolor="#C9FFC9"></body>
 <form method="post" action="/drinks">
     @csrf
     顯示飲料的新增表單

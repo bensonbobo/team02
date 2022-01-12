@@ -1,6 +1,7 @@
 @extends('app')
 @section('title','品牌詳細資料')
 @section('Drink_inventory')
+    <body bgcolor="#C9FFC9"></body>
 
 <table border="1">
 
