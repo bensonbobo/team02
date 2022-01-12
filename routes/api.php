@@ -21,20 +21,16 @@ use Illuminate\Support\Facades\Route;
     Route::post('login', [AuthController::class, 'login']);
 
     Route::group(['middleware' => 'auth:sanctum'], function () {
+            //查詢所有品牌
             Route::get('brands', [BrandsController::class, 'api_brands']);
-            // 修改指定球隊
+            //修改指定品牌
             Route::patch('brands', [BrandsController::class, 'api_update']);
-            // 刪除指定球隊
-
+            //刪除指定品牌
             Route::delete('brands', [BrandsController::class, 'api_delete']);
-            // 查詢所有球員
-
+            // 查詢所有飲料
             Route::get('drinks', [DrinksController::class, 'api_drinks']);
-            // 修改指定球員
-
+            // 修改指定飲料
             Route::patch('drinks', [DrinksController::class, 'api_update']);
-            // 刪除指定球員
-
-
+            // 刪除指定飲料
             Route::delete('drinks', [DrinksController::class, 'api_delete']);
     });

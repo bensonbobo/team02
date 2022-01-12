@@ -1,7 +1,6 @@
 @extends('app')
-
+@section('title','顯示所有飲料資料')
 @section('Drink_inventory')
-<h1>顯示所有飲料資料</h1>
 <a href="/brands">
     品牌資料
 </a>
@@ -22,7 +21,7 @@
         <tr>
             <th>{{$drink->id}}</th>
             <th>{{$drink->name}}</th>
-            <th>{{$drink->bid}}</th>
+            <th>{{$drink->brand->brand}}</th>
             <th>{{$drink->milliliters}}</th>
             <th>{{$drink->price}}</th>
             <th>{{$drink->calories}}</th>

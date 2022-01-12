@@ -37,37 +37,31 @@ class BrandsTableSeeder extends Seeder
     }
     public function generateRandomNames()
     {
-        $name = $this->generateRandomString(rand(2, 15));
-        $name = strtolower($name);
-        $name = ucfirst($name);
+        $name= ['托馬斯‧利普頓', '高清愿', '葉清山', '約翰‧M‧福克斯', '詹玉柱', '查爾斯‧古斯', '阿薩‧坎德勒', '張文杞', '陳忠義', 'W‧加菲爾德‧韋斯頓'];
         return $name;
     }
     public function generateRandomBrand()
     {
         $brand = ['立頓', '統一', '三洋威士比', '美粒果', '泰山', '百事', '可口可樂', '黑松', '波蜜', '英聯'];
-        return $brand[rand(0, count($brand) - 1)];
+        return $brand;
     }
 
-    public function generateRandomCountry()
+    public function generateCountry()
     {
-        $country = [
-            '英國',
-            '台灣',
-            '美國'
-        ];
-        return $country[rand(0, count($country) - 1)];}
+        $country = ['英國', '台灣', '台灣','美國','台灣','美國','美國','台灣','台灣','英國'];
+        return $country;}
         public function run()
         {
             for ($i = 0; $i < 10; $i++) {
-                $name = $this->generateRandomName();
-                $country = $this->generateRandomCountry();
-                $brand = $this->generateRandomNames();
+                $name = $this->generateRandomNames();
+                $country = $this->generateCountry();
+                $brand = $this->generateRandomBrand();
                 $random_datetime = Carbon::now()->subMinutes(rand(1, 55));
 
                 DB::table('brands')->insert([
-                    'brand' => $brand,
-                    'founder' => $name,
-                    'country' => $country,
+                    'brand' => $brand[$i],
+                    'founder' => $name[$i],
+                    'country' => $country[$i],
                     'created_at' => $random_datetime,
                     'updated_at' => $random_datetime
                 ]);

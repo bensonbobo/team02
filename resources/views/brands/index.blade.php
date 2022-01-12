@@ -1,7 +1,7 @@
 @extends('app')
-
+@section('title','顯示所有品牌資料')
 @section('Drink_inventory')
-<h1>顯示所有品牌資料</h1>
+
 <a href="/drinks">
     飲料資料
 </a>

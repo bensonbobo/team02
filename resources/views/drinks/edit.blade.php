@@ -1,5 +1,5 @@
 @extends('app')
-
+@section('title','修改飲料資料')
 @section('Drink_inventory')
 <form method="post" action="/drinks/{{$drink->id}}">
     @csrf

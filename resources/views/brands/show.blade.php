@@ -1,7 +1,7 @@
 @extends('app')
-
+@section('title','品牌詳細資料')
 @section('Drink_inventory')
-顯示所有品牌資料
+
 <table border="1">
 
     <tr><th>編號</th><td>{{$brand->id}}</td></tr>

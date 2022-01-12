@@ -1,5 +1,5 @@
 @extends('app')
-
+@section('title','修改品牌資料')
 @section('Drink_inventory')
 <form method="post" action="/brands/{{$brand->id}}">
     @csrf
@@ -10,7 +10,7 @@
         <th>編號</th><td>{{$brand->id}}</td>
     </tr>
     <tr>
-        <th>品牌</th><td><!--<select name="brand">
+        <th>品牌</th><!--<td><select name="brand">
                 <option value="立頓" selected>立頓</option>
                 <option value="統一">統一</option>
                 <option value="三洋威士比">三洋威士比</option>
