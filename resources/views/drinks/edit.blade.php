@@ -11,15 +11,7 @@
         <th>編號</th><td>{{$drink->id}}</td>
     </tr>
     <tr>
-        <th>名稱</th><td><select name ="bid">
-        @foreach($drinks as $i)
-            @if($drink->name==$i->name)
-                        <option value="{{$i->id}}"selected>{{$i->name}}</option>
-                    @else
-                        <option value="{{$i->id}}">{{$i->name}}</option>
-            @endif
-            @endforeach
-            </select></td></tr>
+        <th>名稱</th><td><input type="text" name="name" value="{{$drink->name}}"required/></td></tr>
     <tr>
         <th>品牌</th><td><select name="bid">
                 <option value=1 selected>立頓</option>

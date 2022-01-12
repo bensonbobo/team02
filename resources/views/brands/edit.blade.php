@@ -12,15 +12,8 @@
     </tr>
     <tr>
         <th>品牌</th>
-            <td><select name ="id">
-        @foreach($brands as $i)
-            @if($brand->brand==$i->brand)
-                <option value="{{$i->id}}"selected>{{$i->brand}}</option>
-            @else
-                <option value="{{$i->id}}">{{$i->brand}}</option>
-            @endif
-        @endforeach
-            </select>
+            <td>
+                <input type="text" name="brand" value="{{$brand->brand}}"required/>
         </td>
     </tr>
     <tr>
